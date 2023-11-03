@@ -8,8 +8,8 @@
     <artifactId>saucedemo-carina</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <name> Saucedemo web tests</name>
-    <url>https://zebrunner.com</url>
+    <name>Saucedemo web tests</name>
+    <url>https://github.com/mtsvilik/saucedemo-carina</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,7 +19,7 @@
         <carina-aws-s3.version>1.1.4</carina-aws-s3.version>
         <java.version>11</java.version>
         <zebrunner-agent.version>1.9.3</zebrunner-agent.version>
-<!--        <suite>saucedemo-suite</suite>-->
+        <suite>saucedemo-suite</suite>
     </properties>
 
     <repositories>
@@ -139,9 +139,9 @@
                 <configuration>
                     <argLine>-javaagent:${project.build.directory}/agent/zebrunner-agent.jar</argLine>
                     <useSystemClassLoader>false</useSystemClassLoader>
-<!--                    					<suiteXmlFiles>-->
-<!--                    						<suiteXmlFile>${project.build.directory}/test-classes/testng_suites/${suite}.xml</suiteXmlFile>-->
-<!--                    					</suiteXmlFiles>-->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${project.build.directory}/test-classes/${suite}.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
